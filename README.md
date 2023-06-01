@@ -13,8 +13,6 @@ Run the project:
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
 ```
 Test account:
 
