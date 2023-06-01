@@ -11,7 +11,7 @@ const ActionBar = () => {
     return (
         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <div style={{ fontWeight: 'bold', cursor: 'pointer' }} onClick={returnToHome}>← Quay lại</div>
-            <Button type='primary'>+ Thêm nhân viên</Button>
+            <Button type='primary' onClick={() => navigate("/addemployee")}>+ Thêm nhân viên</Button>
         </div >
     )
 }
