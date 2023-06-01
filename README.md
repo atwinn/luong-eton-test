@@ -1,4 +1,5 @@
 # eton-test-react
+
 First install:
 
 ```bash
@@ -15,5 +16,14 @@ yarn dev
 # or
 pnpm dev
 ```
+Test account:
+
+```bash
+# Username
+admin
+# Password
+admin
+```
+
 Deploy
 Go to (https://vercel.com/) to deploy
