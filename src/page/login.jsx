@@ -1,17 +1,25 @@
-
-import { Form, Input, Button, message } from 'antd'
+import { useState } from 'react'
+import { Form, Input, Button, message, notification } from 'antd'
+import ModalChooseRole from '../components/modalChooseRole';
 
 const Login = () => {
+    const [open, setOpen] = useState(false);
+
+    const setModalClose = () => setOpen(false)
+
     const onFinish = (value) => {
         const username = value.username //Lấy tài khoản của người dùng nhập từ Form
         const password = value.password //Lấy mật khẩu của người dùng nhập từ Form
         if (username === "admin" && password === "admin") {
+            localStorage.setItem("username", "admin")
             message.success("Chào mừng admin")
-        } else message.warning("Tài khoản hoặc mật khẩu không chính xác")
+            setOpen(true)
+        } else notification.error({ message: 'Lỗi đăng nhập', description: 'Thông tin đăng nhập không chính xác' })
     }
 
     return (
         <div className='login-container' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
+            <ModalChooseRole open={open} close={setModalClose} />
             <Form
                 name="loginForm"
                 labelCol={{
