@@ -22,6 +22,7 @@ admin
 # Password
 admin
 ```
+Default Url: (http://localhost:5173)
 
 Deploy
 Go to (https://vercel.com/) to deploy
